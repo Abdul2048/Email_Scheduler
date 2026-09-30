@@ -1,0 +1,38 @@
+@import '@fontsource-variable/inter';
+@import 'tailwindcss';
+
+/* Values picked from the Figma exports in docs/figma/. */
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand: #0fa24a;
+  --color-brand-hover: #0c8a3e;
+  --color-brand-soft: #e8f5ec;
+  --color-brand-border: #bfe6cc;
+
+  --color-ink: #1f2124;
+  --color-muted: #8b9098;
+  --color-subtle: #b3b7bd;
+  --color-line: #eeefef;
+  --color-surface: #f4f5f4;
+
+  --color-warn: #e0591b;
+  --color-warn-soft: #fff0e3;
+  --color-warn-border: #fbd3b3;
+  --color-danger: #d92d20;
+  --color-danger-soft: #fdecea;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-white font-sans text-sm text-ink antialiased;
+  }
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+}

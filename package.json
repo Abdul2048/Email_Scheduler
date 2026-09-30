@@ -1,0 +1,32 @@
+{
+  "name": "reachinbox-email-scheduler",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "infra:up": "docker compose up -d",
+    "infra:down": "docker compose down",
+    "infra:native": "powershell -ExecutionPolicy Bypass -File scripts/infra-native.ps1 start",
+    "infra:native:stop": "powershell -ExecutionPolicy Bypass -File scripts/infra-native.ps1 stop",
+    "infra:native:status": "powershell -ExecutionPolicy Bypass -File scripts/infra-native.ps1 status",
+    "setup": "npm install && node scripts/ensure-env.mjs && npm run setup -w backend",
+    "dev": "concurrently -n api,worker,web -c blue,magenta,green \"npm run dev:api -w backend\" \"npm run dev:worker -w backend\" \"npm run dev -w frontend\"",
+    "build": "npm run build -w backend && npm run build -w frontend",
+    "test:regression": "npm run test:regression -w backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "allowScripts": {
+    "prisma@6.19.3": true,
+    "@prisma/client@6.19.3": true,
+    "@prisma/engines@6.19.3": true,
+    "esbuild@0.28.2": true,
+    "msgpackr-extract@3.0.4": true
+  }
+}

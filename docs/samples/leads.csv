@@ -1,0 +1,18 @@
+name,email,company
+Lead 01,lead01@example.com,Acme
+Lead 02,lead02@example.com,Acme
+Lead 03,lead03@example.com,Globex
+Lead 04,lead04@example.com,Globex
+Lead 05,lead05@example.com,Initech
+Lead 06,lead06@example.com,Initech
+Lead 07,lead07@example.com,Umbrella
+Lead 08,lead08@example.com,Umbrella
+Lead 09,lead09@example.com,Hooli
+Lead 10,lead10@example.com,Hooli
+Lead 11,lead11@example.com,Stark
+Lead 12,lead12@example.com,Stark
+Lead 13,lead13@example.com,Wayne
+Lead 14,lead14@example.com,Wayne
+Lead 15,lead15@example.com,Wonka
+Duplicate,LEAD01@example.com,Acme
+No email,not an address,Nowhere
